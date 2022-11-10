@@ -6,7 +6,7 @@
   /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 .header {
@@ -15,7 +15,6 @@
   max-height: 756px;
   /* выше установили ограничения для секции */
 }
-
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   height: 568px;
@@ -28,4 +27,75 @@
   color: white;
   margin-right: 0;
   margin-top: 80px;
+}
+
+.header__logo_place_header {
+}
+.header__title {
+}
+.header__subtitle {
+}
+.header__link {
+}
+.header__main-illustration {
+}
+.square-pic {
+}
+.main {
+}
+.decription {
+}
+.two-columns {
+}
+.two-columns__title {
+}
+.two-columns__main-text {
+}
+.two-columns__paragraph {
+}
+.two-columns__span-accent {
+}
+.digits {
+}
+.section-title {
+}
+.section-subtitle {
+}
+.table {
+}
+.table__cell {
+}
+.table__title {
+}
+.table__text {
+}
+.feynman {
+}
+.feynman__title {
+}
+.feynman__subtitle {
+}
+.feynman__link {
+}
+.kaufman {
+}
+.footer {
+}
+.footer__columns {
+}
+.footer__column_content_copyright {
+}
+.footer__author {
+}
+.footer__column_content_info {
+}
+.footer__heading {
+}
+.footer__column-links {
+}
+.footer__column-link {
+}
+.footer__link {
+}
+.footer__column_content_social {
 }
