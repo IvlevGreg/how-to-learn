@@ -16,10 +16,8 @@
 
   /* z-index */
   --z-main-illustration: 10;
-
   --z-header-subtitle: 20;
   --z-header-title: 30;
-
   --z-table: 10;
   /* P.S. не хочу использоывать z-index:-1 т.к. читал что
    это негативно может сказаться на производительности*/
