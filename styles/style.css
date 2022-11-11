@@ -10,35 +10,116 @@
 
   /* ui colors */
   --main-link-color: #2f80ed;
+  --main-link-color-active: #1118ee;
+  --secondary-link-color: white;
+  --secondary-link-color-active: rgb(189, 181, 181);
 
   /* z-index */
   --z-main-illustration: 10;
+
   --z-header-subtitle: 20;
   --z-header-title: 30;
+
+  --z-table: 10;
+  /* P.S. не хочу использоывать z-index:-1 т.к. читал что
+   это негативно может сказаться на производительности*/
 }
 
-.page {
-  min-width: 1100px;
-  max-width: 1600px;
-  margin: 0 auto;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+/* animation */
+
+@keyframes transform-arrow {
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes transform-icon {
+  25% {
+    transform: translateX(10%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /* common */
 
+* {
+  box-sizing: border-box;
+}
+
 .link {
   text-decoration: none;
+  border: none;
+
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link__animated-arrow {
+  position: absolute;
+
+  transition: transform 0.5s ease;
+  transform: translateX(0);
 }
 
 .link_ui_more {
+  position: relative;
+
   color: var(--main-link-color);
 }
 
-.link_ui_secondary {
-  color: var(--secondary-text-color);
+.link_ui_more:hover .link__animated-arrow,
+.link_ui_more:focus .link__animated-arrow {
+  animation: transform-arrow 0.5s infinite ease-in-out;
 }
 
-section {
+.link_ui_more:focus {
+  outline: none;
+  box-shadow: 0 1px var(--main-link-color);
+}
+
+.link_ui_more:active {
+  color: var(--main-link-color-active);
+  box-shadow: 0 1px var(--main-link-color-active);
+}
+
+.link_ui_more:active .link__animated-arrow {
+  animation: none;
+  transform: translateX(20%);
+}
+
+.link_ui_secondary {
+  color: var(--secondary-link-color);
+}
+
+.link_ui_secondary:hover,
+.link_ui_secondary:focus {
+  outline: none;
+  box-shadow: 0 1px var(--secondary-link-color);
+}
+
+.link_ui_secondary:hover .link__animated-icon,
+.link_ui_secondary:focus .link__animated-icon {
+  animation: transform-icon 0.5s infinite ease-in-out;
+}
+
+.link_ui_secondary:active {
+  color: var(--secondary-link-color-active);
+  box-shadow: 0 1px var(--secondary-link-color-active);
+}
+
+.link_ui_secondary:active .link__animated-icon {
+  animation: none;
+  transform: translateX(0);
 }
 
 .section_background_main {
@@ -56,6 +137,13 @@ section {
   width: 100%;
 }
 
+.page {
+  min-width: 1100px;
+  max-width: 1600px;
+  margin: 0 auto;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
 /* header */
 
 .header {
@@ -70,16 +158,10 @@ section {
   max-height: 756px;
 }
 
-.header__logo_place_header {
-  position: absolute;
-  top: 30px;
-  left: 64px;
-}
-
 .header__title {
   position: relative;
   width: 730px;
-  margin: 60px 0;
+  margin: 0;
   z-index: var(--z-header-title);
 
   font-size: 102px;
@@ -94,6 +176,7 @@ section {
   z-index: var(--z-header-subtitle);
 
   width: 388px;
+  margin: 0;
 
   line-height: 25px;
   font-size: 18px;
@@ -124,10 +207,46 @@ section {
   background-color: var(--main-link-color);
 }
 
+.logo {
+  transition: box-shadow 0.3s ease;
+}
+
+.logo:focus {
+  outline: none;
+}
+
+.logo_place_header {
+  position: absolute;
+  top: 30px;
+  left: 64px;
+}
+
+.logo_place_footer {
+  width: max-content;
+}
+
+.logo_place_header:hover,
+.logo_place_header:focus {
+  box-shadow: 0 1px var(--main-text-color);
+}
+
+.logo_place_header:active {
+  box-shadow: 0 3px var(--main-text-color);
+}
+
+.logo_place_footer:hover,
+.logo_place_footer:focus {
+  box-shadow: 0 1px var(--secondary-text-color);
+}
+
+.logo_place_footer:active {
+  box-shadow: 0 3px var(--secondary-text-color);
+}
+
 .main {
 }
 
-.decription {
+.description {
   padding: 100px 0 50px;
   display: flex;
   justify-content: center;
@@ -139,7 +258,8 @@ section {
   width: 80%;
 }
 
-.two-columns__title {
+.two-columns__brief {
+  margin: 0;
   width: 175px;
 
   line-height: 1.2;
@@ -195,7 +315,13 @@ section {
   font-weight: normal;
 }
 
+.section-subtitle_theme_dark {
+  margin-bottom: 80px;
+}
+
 .table {
+  z-index: var(--z-table);
+
   display: flex;
   justify-content: space-between;
   gap: 60px 0;
@@ -207,28 +333,34 @@ section {
   list-style: none;
 }
 
-.table__cell_width_m {
-  width: 250px;
+.table_theme_dark {
+  gap: 80px 0;
 }
 
-.table__cell_width_s {
-  width: 200px;
+.table__cell {
+  width: 250px;
 }
 
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
-  color: white;
+  /* color: white; */
   margin-right: 0;
-  margin-top: 80px;
 }
 
 .table__title {
   margin: 0 0 20px;
+
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .table__text {
   margin: 0 0 20px;
+
+  line-height: 1.2;
+  font-size: 18px;
 }
 
 .table__text:last-child {
@@ -242,7 +374,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 890px;
+  min-height: 890px;
 
   background-image: url("../images/feynman.png");
   background-repeat: no-repeat;
@@ -280,14 +412,24 @@ section {
 }
 
 .kaufman {
+  position: relative;
+
   padding: 90px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+}
+
+.kaufman__triangle {
+  position: absolute;
+  top: 0;
+  right: -210px;
+  width: 877px;
+  height: 877px;
 
   background-image: url("../images/kaufman-triangle.svg");
   background-repeat: no-repeat;
-  background-position: top right -250px;
 }
 
 .footer {
@@ -301,9 +443,6 @@ section {
   display: flex;
   justify-content: space-between;
   width: 90%;
-}
-
-.footer__logo_place_footer {
 }
 
 .footer__column_content_copyright {
@@ -324,7 +463,7 @@ section {
 .footer__column_content_info {
 }
 
-.footer__heading {
+.footer__column-heading {
   margin: 0 0 20px;
 
   line-height: 30px;
@@ -340,16 +479,12 @@ section {
 }
 
 .footer__column-link {
-  margin-bottom: 16px;
-}
-
-.footer__column-link:last-child {
-  margin-bottom: 0;
-}
-
-.footer__link {
   line-height: 30px;
   font-size: 18px;
+}
+
+.footer__social-icon {
+  margin-right: 10px;
 }
 
 .footer__column_content_social {
