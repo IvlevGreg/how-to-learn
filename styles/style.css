@@ -19,6 +19,7 @@
   --z-header-subtitle: 20;
   --z-header-title: 30;
   --z-table: 10;
+  --z-section: 10;
   /* P.S. не хочу использоывать z-index:-1 т.к. читал что
    это негативно может сказаться на производительности*/
 }
@@ -50,10 +51,6 @@
 }
 
 /* common */
-
-* {
-  box-sizing: border-box;
-}
 
 .link {
   text-decoration: none;
@@ -118,6 +115,10 @@
 .link_ui_secondary:active .link__animated-icon {
   animation: none;
   transform: translateX(0);
+}
+
+.section {
+  box-sizing: border-box;
 }
 
 .section_background_main {
@@ -294,6 +295,8 @@
 }
 
 .section-title {
+  z-index: var(--z-section);
+
   width: 60%;
   text-align: center;
   margin: 0 0 20px;
@@ -304,6 +307,8 @@
 }
 
 .section-subtitle {
+  z-index: var(--z-section);
+
   width: 60%;
   text-align: center;
   margin: 0 0 60px;
@@ -428,6 +433,7 @@
 
   background-image: url("../images/kaufman-triangle.svg");
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .footer {
@@ -483,6 +489,9 @@
 
 .footer__social-icon {
   margin-right: 10px;
+
+  width: 16px;
+  height: 16px;
 }
 
 .footer__column_content_social {
