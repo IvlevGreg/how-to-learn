@@ -1,12 +1,52 @@
+/* vindors */
+@import url("../vendor/normalize.css");
+
+/* varaibles */
+@import url("../variables/color-background.css");
+@import url("../variables/color-text.css");
+@import url("../variables/ui-colors.css");
+@import url("../variables/z-index.css");
+
+/* section */
+@import url("../blocks/section/section.css");
+@import url("../blocks/section/_background/section_background_main.css");
+@import url("../blocks/section/_background/section_background_secondary.css");
+
+/* section-subtitle */
+
+@import url("../blocks/section-subtitle/section-subtitle.css");
+
+/* section-title */
+@import url("../blocks/section-title/section-title.css");
+
+/*  container */
+@import url("../blocks/container/container.css");
+
+/* link */
+@import url("../blocks/link/link.css");
+@import url("../blocks/link/__animated-arrow/link__animated-arrow.css");
+@import url("../blocks/link/_ui/link_ui_more.css");
+@import url("../blocks/link/_ui/link_ui_secondary.css");
+
+/* logo */
+@import url("../blocks/logo/logo.css");
+@import url("../blocks/logo/_place/logo_place_footer.css");
+@import url("../blocks/logo/_place/logo_place_header.css");
+
+/* table */
+@import url("../blocks/table/table.css");
+@import url("../blocks/table/__cell/table__cell.css");
+@import url("../blocks/table/__cell/_theme/table__cell_theme_dark.css");
+@import url("../blocks/table/__text/table__text.css");
+@import url("../blocks/table/__title/table__title.css");
+@import url("../blocks/table/_theme/table_theme_dark.css");
+
 /* cards */
 @import url("../blocks/cards/cards.css");
 @import url("../blocks/cards/__description/cards__description.css");
 @import url("../blocks/cards/__image/cards__image.css");
 @import url("../blocks/cards/__item/cards__item.css");
 @import url("../blocks/cards/__title/cards__title.css");
-
-/*  container */
-@import url("../blocks/container/container.css");
 
 /* description */
 @import url("../blocks/description/description.css");
@@ -45,6 +85,9 @@
 /* kaufman */
 @import url("../blocks/kaufman/kaufman.css");
 @import url("../blocks/kaufman/__triangle/kaufman__triangle.css");
+@import url("../blocks/kaufman/__subtitle/kaufman__subtitle.css");
+@import url("../blocks/kaufman/__cell/kaufman__cell.css");
+@import url("../blocks/kaufman/__table/kaufman__table.css");
 
 /* khan */
 @import url("../blocks/khan/khan.css");
@@ -57,17 +100,6 @@
 @import url("../blocks/khan/__quote-author/khan__quote-author.css");
 @import url("../blocks/khan/__quote/khan__quote.css");
 @import url("../blocks/khan/__title/khan__title.css");
-
-/* link */
-@import url("../blocks/link/link.css");
-@import url("../blocks/link/__animated-arrow/link__animated-arrow.css");
-@import url("../blocks/link/_ui/link_ui_more.css");
-@import url("../blocks/link/_ui/link_ui_secondary.css");
-
-/* logo */
-@import url("../blocks/logo/logo.css");
-@import url("../blocks/logo/_place/logo_place_footer.css");
-@import url("../blocks/logo/_place/logo_place_header.css");
 
 /* main */
 @import url("../blocks/main/main.css");
@@ -84,35 +116,10 @@
 @import url("../blocks/resources/__link/resources__link.css");
 @import url("../blocks/resources/__logo-zone/resources__logo-zone.css");
 @import url("../blocks/resources/__resource/resources__resource.css");
+@import url("../blocks/resources/__subtitle/resouces__subtitle.css");
 
 /* rotation */
 @import url("../blocks/rotation/rotation.css");
-
-/* section */
-@import url("../blocks/section/section.css");
-@import url("../blocks/section/_background/section_background_main.css");
-@import url("../blocks/section/_background/section_background_secondary.css");
-
-@import url("../blocks/section/_d-flex/section_d-flex_column.css");
-
-/* section-subtitle */
-
-@import url("../blocks/section-subtitle/section-subtitle.css");
-@import url("../blocks/section-subtitle/_mb/section-subtitle_mb_m.css");
-@import url("../blocks/section-subtitle/_mb/section-subtitle_mb_s.css");
-
-@import url("../blocks/section-subtitle/_theme/section-subtitle_theme_dark.css");
-
-/* section-title */
-@import url("../blocks/section-title/section-title.css");
-
-/* table */
-@import url("../blocks/table/table.css");
-@import url("../blocks/table/__cell/_theme/table__cell_theme_dark.css");
-@import url("../blocks/table/__cell/table__cell.css");
-@import url("../blocks/table/__text/table__text.css");
-@import url("../blocks/table/__title/table__title.css");
-@import url("../blocks/table/_theme/table_theme_dark.css");
 
 /* techniques */
 @import url("../blocks/techniques/techniques.css");
@@ -128,28 +135,5 @@
 @import url("../blocks/video/video.css");
 @import url("../blocks/video/__iframe/video__iframe.css");
 @import url("../blocks/video/__iframes/video__iframes.css");
-
-:root {
-  /* color background */
-  --main-bac-color: #f2f2f2;
-  --secondary-bac-color: #1f1f1f;
-
-  /* color text */
-  --main-text-color: #000000;
-  --secondary-text-color: white;
-
-  /* ui colors */
-  --main-link-color: #2f80ed;
-  --main-link-color-active: #1671e8;
-  --secondary-link-color: white;
-  --secondary-link-color-active: rgb(189, 181, 181);
-
-  /* z-index */
-  --z-main-illustration: 10;
-  --z-header-subtitle: 20;
-  --z-header-title: 30;
-  --z-table: 10;
-  --z-section: 10;
-  /* P.S. не хочу использоывать z-index:-1 т.к. читал что
-   это негативно может сказаться на производительности*/
-}
+@import url("../blocks/video/__subtitle/video__subtitle.css");
+@import url("../blocks/video/__iframe-item/video__iframe-item.css");
