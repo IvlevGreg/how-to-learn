@@ -1,0 +1,45 @@
+@keyframes transform-icon {
+  25% {
+    transform: translateX(10%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.link_ui_secondary {
+  color: var(--secondary-link-color);
+  transition: opacity 0.5s ease;
+}
+
+.link_ui_secondary:hover {
+  opacity: 0.7;
+}
+
+.link_ui_secondary:hover,
+.link_ui_secondary:focus {
+  outline: none;
+  box-shadow: 0 1px var(--secondary-link-color);
+}
+
+.link_ui_secondary:hover .link__animated-icon,
+.link_ui_secondary:focus .link__animated-icon {
+  animation: transform-icon 0.5s infinite ease-in-out;
+}
+
+.link_ui_secondary:active {
+  opacity: 1;
+  color: var(--secondary-link-color-active);
+  box-shadow: 0 1px var(--secondary-link-color-active);
+}
+
+.link_ui_secondary:active .link__animated-icon {
+  animation: none;
+  transform: translateX(0);
+}

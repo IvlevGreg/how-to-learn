@@ -1,0 +1,39 @@
+@keyframes transform-arrow {
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.link_ui_more {
+  transition: opacity 0.5s ease;
+
+  color: var(--main-link-color);
+}
+
+.link_ui_more:hover {
+  opacity: 0.7;
+}
+
+.link_ui_more:hover .link__animated-arrow,
+.link_ui_more:focus .link__animated-arrow {
+  animation: transform-arrow 0.5s infinite ease-in-out;
+}
+
+.link_ui_more:focus {
+  outline: none;
+  box-shadow: 0 1px var(--main-link-color);
+}
+
+.link_ui_more:active {
+  opacity: 1;
+  color: var(--main-link-color-active);
+  box-shadow: 0 1px var(--main-link-color-active);
+}
+
+.link_ui_more:active .link__animated-arrow {
+  animation: none;
+  transform: translateX(20%);
+}

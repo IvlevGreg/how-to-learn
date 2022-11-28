@@ -1,0 +1,12 @@
+.logo_place_footer {
+  width: max-content;
+}
+
+.logo_place_footer:hover,
+.logo_place_footer:focus {
+  box-shadow: 0 1px var(--secondary-text-color);
+}
+
+.logo_place_footer:active {
+  box-shadow: 0 3px var(--secondary-text-color);
+}

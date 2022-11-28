@@ -1,0 +1,6 @@
+.video {
+  z-index: var(--z-section);
+
+  padding-top: 50px;
+  margin-bottom: -40px;
+}

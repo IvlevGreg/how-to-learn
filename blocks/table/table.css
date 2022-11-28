@@ -1,0 +1,13 @@
+.table {
+  z-index: var(--z-table);
+
+  display: flex;
+  justify-content: space-between;
+  gap: 60px 0;
+  flex-wrap: wrap;
+  width: 1100px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}

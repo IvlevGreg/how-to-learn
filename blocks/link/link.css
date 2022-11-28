@@ -1,0 +1,6 @@
+.link {
+  text-decoration: none;
+  border: none;
+
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+}
