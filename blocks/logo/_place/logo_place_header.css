@@ -3,12 +3,3 @@
   top: 30px;
   left: 64px;
 }
-
-.logo_place_header:hover,
-.logo_place_header:focus {
-  box-shadow: 0 1px var(--main-text-color);
-}
-
-.logo_place_header:active {
-  box-shadow: 0 3px var(--main-text-color);
-}

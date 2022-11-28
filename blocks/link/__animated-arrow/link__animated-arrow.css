@@ -1,6 +1,6 @@
 .link__animated-arrow {
-  position: absolute;
+  /* position: absolute; */
 
-  transition: transform 0.5s ease;
-  transform: translateX(0);
+  /* transition: transform 0.5s ease;
+  transform: translateX(0); */
 }

@@ -4,3 +4,7 @@
   line-height: 1.2;
   font-size: 18px;
 }
+
+.table__text:last-child {
+  margin-bottom: 0;
+}
