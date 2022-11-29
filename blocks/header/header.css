@@ -9,4 +9,7 @@
 
   min-height: 600px;
   max-height: 756px;
+
+  background-color: var(--main-bac-color);
+  color: var(--main-text-color);
 }

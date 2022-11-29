@@ -11,4 +11,6 @@
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: 867px 637px;
+  background-color: var(--main-bac-color);
+  color: var(--main-text-color);
 }

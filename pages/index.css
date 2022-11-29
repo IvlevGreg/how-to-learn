@@ -9,15 +9,15 @@
 
 /* section */
 @import url("../blocks/section/section.css");
-@import url("../blocks/section/_background/section_background_main.css");
-@import url("../blocks/section/_background/section_background_secondary.css");
 
 /* section-subtitle */
 
 @import url("../blocks/section-subtitle/section-subtitle.css");
+@import url("../blocks/section-subtitle/_theme/section-subtitle_theme_dark.css");
 
 /* section-title */
 @import url("../blocks/section-title/section-title.css");
+@import url("../blocks/section-title/_theme/section-title_theme_dark.css");
 
 /*  container */
 @import url("../blocks/container/container.css");
@@ -86,8 +86,6 @@
 @import url("../blocks/kaufman/kaufman.css");
 @import url("../blocks/kaufman/__triangle/kaufman__triangle.css");
 @import url("../blocks/kaufman/__subtitle/kaufman__subtitle.css");
-@import url("../blocks/kaufman/__cell/kaufman__cell.css");
-@import url("../blocks/kaufman/__table/kaufman__table.css");
 
 /* khan */
 @import url("../blocks/khan/khan.css");

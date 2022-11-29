@@ -3,4 +3,7 @@
   min-height: 350px;
   display: flex;
   justify-content: center;
+
+  background-color: var(--secondary-bac-color);
+  color: var(--secondary-text-color);
 }
